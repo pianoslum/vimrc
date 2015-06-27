@@ -10,6 +10,7 @@ set mouse=a
 set wildmenu
 set showcmd
 set hlsearch
+set incsearch
 set ignorecase
 set smartcase
 
