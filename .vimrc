@@ -41,6 +41,8 @@ NeoBundle 'henrik/vim-indexed-search'
 
 NeoBundle 'easymotion/vim-easymotion'
 
+NeoBundle 'lervag/vimtex'
+
 NeoBundle 'Shougo/vimproc.vim', {
             \ 'build' : {
             \     'windows' : 'tools\\update-dll-mingw',
@@ -140,3 +142,20 @@ if !exists('g:airline_symbols')
   let g:airline_symbols.space = "\ua0"
 
 set spelllang=de
+
+" Easymotions
+
+nmap <leader>j <Plug>(easymotion-bd-jk)
+nmap <leader>f <Plug>(easymotion-s)
+nmap <leader>w <Plug>(easymotion-bd-w)
+nmap <leader>t <Plug>(easymotion-bd-t)
+
+" Unite fuzzy finder
+nnoremap <C-p> :Unite file_rec/async<cr>
+
+" build shortcuts
+nmap <leader>m :wall <bar> make -j8<cr>
+nmap <leader>r :wall <bar> make run -j8<cr>
+
+" use folds
+set fdm=syntax
